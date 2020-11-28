@@ -1,0 +1,18 @@
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+[class^="col-"] {
+    width: 100%;
+}
+
+
+@include generate_columns(12, $breakpoints);

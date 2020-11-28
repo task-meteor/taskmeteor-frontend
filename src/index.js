@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
-
+import "./styles/styles.scss";
 import Home from "./pages/Home/Home";
 
 

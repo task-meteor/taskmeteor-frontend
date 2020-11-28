@@ -1,0 +1,23 @@
+@import "./variables";
+
+@mixin generate_columns($num_cols, $breakpoints) {
+
+    @each $type, $screen_width in $breakpoints {
+        
+        @media (min-width: $screen_width) {
+
+            @for $i from 1 through $num_cols {
+                .col-#{$type}-#{$i} {
+                    width: $i / 12 * 100%;
+                    padding-right: 3rem;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
