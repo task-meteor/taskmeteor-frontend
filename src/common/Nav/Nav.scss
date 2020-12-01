@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.Nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .logo {
+        display: inline-block;
+        text-decoration: none;
+        text-indent: -99999px;
+        background-image: url(../../images/logo_white.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        height: 4rem;
+        width: 14rem;
+    }
+
+    nav {
+        float: right;
+        display: flex;
+
+        a {
+            line-height: 4rem;
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+}
