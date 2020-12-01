@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .Features {
     .Feature {
         align-items: center;
@@ -9,6 +11,13 @@
         
         &-description {
             font-size: 1.6rem;
+        }
+
+        // if that's the 2nd, 4th, 6th, etc. feature, description goes before an image
+        @include responsive("md") {
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
         }
     }
 }
