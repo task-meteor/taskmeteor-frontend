@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Hero {
+    background: linear-gradient(to bottom, black, $color-blue-dark 50%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    h1 {
+        color: $color-white;
+
+        @include responsive("md") {
+            font-size: 6rem;
+        }
+
+        @include responsive("lg") {
+            font-size: 2.8vw;
+        }
+    }
+
+    p {
+        color: $color-white;
+    }
+}
