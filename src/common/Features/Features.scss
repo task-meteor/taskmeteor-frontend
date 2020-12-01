@@ -1,0 +1,14 @@
+.Features {
+    .Feature {
+        align-items: center;
+        margin-bottom: 12rem;
+
+        &-image {
+            width: 100%;
+        }
+        
+        &-description {
+            font-size: 1.6rem;
+        }
+    }
+}
