@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -8,4 +10,43 @@ html {
 
 body {
     font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4;
+    color: $color-blue-light;
+}
+
+
+// Headings
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    color: $color-blue-dark;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 4.8rem;
+
+    @include responsive("lg") {
+        font-size: 2.8vw;
+    }
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 2.1rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
 }

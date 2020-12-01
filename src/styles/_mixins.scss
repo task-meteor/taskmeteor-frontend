@@ -21,3 +21,10 @@
 
     }
 }
+
+
+@mixin responsive($type) {
+    @media (min-width: map-get($map: $breakpoints, $key: $type)) {
+        @content;
+    }
+}
