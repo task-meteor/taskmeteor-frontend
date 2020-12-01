@@ -1,4 +1,17 @@
+@import "../../styles/mixins";
+
 .Intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include responsive("lg") {
+        background-image: url(../../images/astronaut.svg);
+        background-repeat: no-repeat;
+        background-position: calc(50% + 400px) center;
+        min-height: 500px;
+    }
+
     p {
         font-size: 1.6rem;
     }
