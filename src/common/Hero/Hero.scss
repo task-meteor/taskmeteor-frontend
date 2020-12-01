@@ -2,12 +2,23 @@
 @import "../../styles/mixins";
 
 .Hero {
-    background: linear-gradient(to bottom, black, $color-blue-dark 50%);
-    height: 100vh;
+    background-image: url(../../images/stars.svg), linear-gradient(to bottom, black, $color-blue-dark 50%);
+    background-size: cover;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed; // the backgrounds here don't move
+    height: 100vh; // occupy the whole height of the screen
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    @include responsive("lg") {
+        // the planet is visible only on large screens
+        background-image: url(../../images/planet.svg), url(../../images/stars.svg), linear-gradient(to bottom, black, $color-blue-dark 50%);
+        background-repeat: no-repeat, repeat, repeat;
+        // the planet is moved 300px to the left from the center of the screen
+        background-position: calc(50% - 300px) 300px, center center, 0 0;
+        background-size: contain, cover;
+    }
 
     h1 {
         color: $color-white;
